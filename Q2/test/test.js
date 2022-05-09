@@ -34,7 +34,8 @@ describe("HelloWorld", function () {
     });
 
     it("Should return true for correct proof", async function () {
-        //[assignment] Add comments to explain what each line is doing
+        //[assignment] Add comments to explain what each line is doing 
+        // generate the proof 
         const { proof, publicSignals } = await groth16.fullProve({"a":"1","b":"2"}, "contracts/circuits/HelloWorld/HelloWorld_js/HelloWorld.wasm","contracts/circuits/HelloWorld/circuit_final.zkey");
 
         console.log('1x2 =',publicSignals[0]);
